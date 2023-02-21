@@ -1,1 +1,5 @@
 <h1><%= @task.title %></h1>
+<%= link_to 'Delete',
+  task_path(@task), # it's the task from line 1 (which I want to delete)
+  data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'}
+%>
